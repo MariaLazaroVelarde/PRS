@@ -1,21 +1,19 @@
-# Usa una imagen base de Java (JDK 17 es común para Spring Boot 3.x)
-FROM eclipse-temurin:17-jdk-alpine
-
-# Directorio de trabajo dentro del contenedor
+# Etapa de construcción
+FROM eclipse-temurin:17-jdk-alpine AS builder
 WORKDIR /app
-
-# Copia el archivo JAR construido al contenedor
 COPY target/structure-microservice.jar app.jar
 
-# Expone el puerto configurado por defecto (puede cambiarse por la variable de entorno SERVER_PORT)
-EXPOSE 8086
+# Etapa final con imagen distroless
+FROM gcr.io/distroless/java17-debian11
+WORKDIR /app
+COPY --from=builder /app/app.jar app.jar
 
-# Define variables de entorno por defecto (puedes sobreescribirlas en docker-compose o en tiempo de ejecución)
+# Variables de entorno (opcional, puedes setearlas en docker-compose)
 ENV NOMBRE_MICROSERVICIO=structure-microservice \
     MONGO_USERNAME=sistemajass \
     MONGO_PASSWORD=ZC7O1Ok40SwkfEje \
     MONGO_DATABASE=JASS_DIGITAL \
     SERVER_PORT=8086
 
-# Comando para ejecutar el microservicio
+EXPOSE 8086
 ENTRYPOINT ["java", "-jar", "app.jar"]

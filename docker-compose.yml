@@ -14,7 +14,7 @@ services:
       - mongo_data:/data/db
 
   structure-microservice:
-    image: structure-microservice:latest
+    image: victorcuaresma/vg-ms-distribution:latest
     container_name: structure-microservice
     build:
       context: .
