@@ -1,3 +1,4 @@
+pe/edu/vallegrande/ms_distribution/application/config/OpenApiConfig.class
 pe/edu/vallegrande/ms_distribution/domain/models/DistributionRoute$ZoneOrder$ZoneOrderBuilder.class
 pe/edu/vallegrande/ms_distribution/application/services/impl/DistributionRouteServiceImpl.class
 pe/edu/vallegrande/ms_distribution/application/services/impl/ZonesServiceImpl.class
@@ -12,7 +13,6 @@ pe/edu/vallegrande/ms_distribution/infrastructure/dto/response/FareResponse$Fare
 pe/edu/vallegrande/ms_distribution/infrastructure/repository/DistributionScheduleRepository.class
 pe/edu/vallegrande/ms_distribution/infrastructure/dto/response/DistributionScheduleResponse.class
 pe/edu/vallegrande/ms_distribution/infrastructure/dto/ErrorMessage.class
-pe/edu/vallegrande/ms_distribution/application/config/SwaggerConfig.class
 pe/edu/vallegrande/ms_distribution/domain/enums/Constants.class
 pe/edu/vallegrande/ms_distribution/infrastructure/dto/response/DistributionProgramResponse$DistributionProgramResponseBuilder.class
 pe/edu/vallegrande/ms_distribution/domain/models/DistributionProgram$DistributionProgramBuilder.class

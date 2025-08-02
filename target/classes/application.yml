@@ -14,18 +14,22 @@ server:
   servlet:
     context-path: /
 
+
 springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-    enabled: true
-    config-url: /v3/api-docs/swagger-config
-    urls:
-      - url: /v3/api-docs
-        name: API V1
-  api-docs:
-    path: /v3/api-docs
-  default-produces-media-type: application/json
-  paths-to-match: /api/**
+     api-docs:
+          path: /v3/api-docs
+          enabled: true
+
+     swagger-ui:
+          path: /swagger-ui.html
+          try-it-out-enabled: true
+          operations-sorter: method
+          tags-sorter: alpha
+          display-request-duration: true
+          disable-swagger-default-url: true
+
+     show-actuator: false
+
 
 management:
   endpoints:

@@ -1,5 +1,5 @@
 /workspaces/PRS/src/main/java/pe/edu/vallegrande/ms_distribution/application/config/GlobalCorsConfig.java
-/workspaces/PRS/src/main/java/pe/edu/vallegrande/ms_distribution/application/config/SwaggerConfig.java
+/workspaces/PRS/src/main/java/pe/edu/vallegrande/ms_distribution/application/config/OpenApiConfig.java
 /workspaces/PRS/src/main/java/pe/edu/vallegrande/ms_distribution/application/services/DistributionProgramService.java
 /workspaces/PRS/src/main/java/pe/edu/vallegrande/ms_distribution/application/services/DistributionRouteService.java
 /workspaces/PRS/src/main/java/pe/edu/vallegrande/ms_distribution/application/services/DistributionScheduleService.java

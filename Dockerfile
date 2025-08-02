@@ -1,7 +1,7 @@
 # Etapa de construcción
 FROM eclipse-temurin:17-jdk-alpine AS builder
 WORKDIR /app
-COPY target/structure-microservice.jar app.jar
+COPY target/structure-microservice-1.0.0.jar app.jar
 
 # Etapa final con imagen distroless
 FROM gcr.io/distroless/java17-debian11
