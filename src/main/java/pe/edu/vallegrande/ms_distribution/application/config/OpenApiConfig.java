@@ -20,8 +20,8 @@ public class OpenApiConfig {
      public OpenAPI customOpenAPI() {
           return new OpenAPI()
                     .info(new Info()
-                              .title("VG Microservicio de Usuarios y Autenticación")
-                              .description("API para gestión de usuarios y autenticación del sistema JASS Digital. " +
+                              .title("VG Microservicio de Distribucion de Agua")
+                              .description("API para gestión de Distribucion de Agua del sistema JASS Digital. " +
                                         "Disponible en: https://lab.vallegrande.edu.pe/jass/ms-inventory/")
                               .version("2.0.0")
                               .contact(new Contact()

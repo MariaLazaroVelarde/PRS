@@ -10,26 +10,26 @@ spring:
         period: 0
 
 server:
-  port: ${SERVER_PORT:8080}
-  servlet:
-    context-path: /
-
+     port: 8086
+     forward-headers-strategy: framework
+cors:
+     allowed-origins: "*"
+     allowed-methods: GET,POST,PUT,DELETE,PATCH,OPTIONS,HEAD
+     allowed-headers: "*"
+     allow-credentials: true
+     max-age: 3600
 
 springdoc:
-     api-docs:
-          path: /v3/api-docs
-          enabled: true
-
-     swagger-ui:
-          path: /swagger-ui.html
-          try-it-out-enabled: true
-          operations-sorter: method
-          tags-sorter: alpha
-          display-request-duration: true
-          disable-swagger-default-url: true
-
-     show-actuator: false
-
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    urls:
+      - url: /v3/api-docs
+        name: API V1
+  api-docs:
+    path: /v3/api-docs
+  default-produces-media-type: application/json
+  paths-to-match: /api/**
 
 management:
   endpoints:
@@ -47,4 +47,4 @@ management:
 app:
   name: Water Distribution Microservice
   description: Microservicio para gestión de distribuciones en el servicio de agua
-  version: 1.0.0
+  version: 1.0.0s
