@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "zones")
+@Document(collection = "zone")
 public class Zones {
     @Id
     private String zoneId;

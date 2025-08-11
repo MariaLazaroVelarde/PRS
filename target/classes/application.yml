@@ -1,3 +1,4 @@
+# MONGO_DATABASE
 spring:
   application:
     name: ${NOMBRE_MICROSERVICIO:structure-microservice}

@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "distribution_routes")
+@Document(collection = "routes")
 public class DistributionRoute {
 
     @Id

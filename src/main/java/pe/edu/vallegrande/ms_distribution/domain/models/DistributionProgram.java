@@ -6,22 +6,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "distribution_programs")
+@Document(collection = "programs")
 public class DistributionProgram {
 
     @Id
     private String id;
-
-    private String organizationId;
     private String programCode;
     private String scheduleId;
     private String routeId;
-
+    private String organizationId; 
+    private String zoneId;            
+    private List<String> streetId;    
     private LocalDate programDate;
     private String plannedStartTime;
     private String plannedEndTime;
