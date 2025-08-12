@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sistemajass
+      MONGO_INITDB_ROOT_PASSWORD: ZC7O1Ok40SwkfEje
+      MONGO_INITDB_DATABASE: JASS_DIGITAL
+    volumes:
+      - mongo_data:/data/db
+
+  structure-microservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: structure-microservice
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_USERNAME: sistemajass
+      MONGO_PASSWORD: ZC7O1Ok40SwkfEje
+      MONGO_DATABASE: JASS_DIGITAL
+      SERVER_PORT: 8086
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
