@@ -1,6 +1,7 @@
 package pe.edu.vallegrande.ms_distribution.infrastructure.dto.response;
 
 import lombok.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -10,6 +11,9 @@ public class DistributionProgramResponse {
 
     private String id;
     private String organizationId;
+    private String zoneId;          
+    private List<String> streetId; 
+
     private String programCode;
     private String scheduleId;
     private String routeId;
@@ -23,5 +27,5 @@ public class DistributionProgramResponse {
     private String status;
     private String responsibleUserId;
     private String observations;
-    private String createdAt;           // Formato ISO (puede ser convertido desde Instant)
+    private String createdAt;           // Formato ISO
 }
